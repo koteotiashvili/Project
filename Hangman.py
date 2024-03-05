@@ -4,7 +4,7 @@ import random
 
 # Define chosen word and randomize it
 def choose_word():
-    word_list = ['apple', 'banana', 'cherry', 'dog', 'cat', 'wolf' 'bee', 'orange']
+    word_list = ['apple', 'banana', 'cherry', 'dog', 'cat', 'wolf', 'bee', 'orange']
     return random.choice(word_list)
 
 
