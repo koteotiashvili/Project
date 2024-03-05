@@ -15,7 +15,6 @@ def display_word(word, guessed_letters):
     for letter in word:
         if letter in guessed_letters:
             displayed_word += letter
-
         else:
             # Display the word with _ for letters not guessed yet
             displayed_word += "_"
@@ -43,15 +42,18 @@ def hangman():
         elif guess in guessed_letters:
             print("You've already guessed that letter.")
             # use append to keep tracking what letters user used
-            guessed_letters.append(guess)
+        guessed_letters.append(guess)
 
-            # use if not in to highlight incorrect guesses
-            if guess not in secret_word:
-                attempts -= 1
-                print("Incorrect guess!")
+        # use if not in to highlight incorrect guesses
+        if guess not in secret_word:
+            attempts -= 1
+            print("Incorrect guess!")
             # and use if not to check if - is in word if not in it means user won game
-            if "_" not in display_word(secret_word, guessed_letters):
-                print("\nCongratulations! You guessed the word:", secret_word)
-                break
+        if "_" not in display_word(secret_word, guessed_letters):
+             print("\nCongratulations! You guessed the word:", secret_word)
+             break
+
+
 hangman()
+
 
