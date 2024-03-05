@@ -29,7 +29,7 @@ def guess_number():
         except ValueError:
             print(f"You must use a number, u have {attempt - 1} tries left")
             attempt -= 1
-        if not guessed:
+    if not guessed:
             print(f'you ran out of attempts, u lost,number was {number}')
 
 
