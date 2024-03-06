@@ -48,6 +48,8 @@ def hangman():
         if guess not in secret_word:
             attempts -= 1
             print("Incorrect guess!")
+        if attempts == 0:
+            print("Sorry u died!!")
             # and use if not to check if - is in word if not in it means user won game
         if "_" not in display_word(secret_word, guessed_letters):
              print("\nCongratulations! You guessed the word:", secret_word)
